@@ -41,31 +41,31 @@ public class GlobalExceptionsHandler {
 	}
 	@ExceptionHandler(value=CustomerNotFoundException.class)
 	public ResponseEntity<String> CustomerNotFoundException(CustomerNotFoundException c) {
-		return new ResponseEntity<String>(message2,HttpStatus.NOT_FOUND);
+		return new ResponseEntity<>(message2,HttpStatus.NOT_FOUND);
 	}
 	@ExceptionHandler(value=BookingAlreadyExistsException.class)
-	public ResponseEntity NoBookingFoundException(BookingAlreadyExistsException b) {
-		return new ResponseEntity(message3,HttpStatus.NOT_FOUND);
+	public ResponseEntity<String> NoBookingFoundException(BookingAlreadyExistsException b) {
+		return new ResponseEntity<>(message3,HttpStatus.NOT_FOUND);
 	}
 	@ExceptionHandler(value=TransactionRecordNotFoundException.class)
-	public ResponseEntity TransactionRecordNotFoundException(TransactionRecordNotFoundException b) {
-		return new ResponseEntity(message4,HttpStatus.ALREADY_REPORTED);
+	public ResponseEntity<String> TransactionRecordNotFoundException(TransactionRecordNotFoundException b) {
+		return new ResponseEntity<>(message4,HttpStatus.ALREADY_REPORTED);
 	}
 	@ExceptionHandler(value=CustomerAlreadyExistsException.class)
-	public ResponseEntity CustomerAlreadyExistsException(CustomerAlreadyExistsException b) {
-		return new ResponseEntity(message5,HttpStatus.ALREADY_REPORTED);
+	public ResponseEntity<String> CustomerAlreadyExistsException(CustomerAlreadyExistsException b) {
+		return new ResponseEntity<>(message5,HttpStatus.ALREADY_REPORTED);
 	}
 	@ExceptionHandler(value=InvalidCredentialsException.class)
-	public ResponseEntity InvalidCredentialsException(InvalidCredentialsException b) {
-		return new ResponseEntity(message6,HttpStatus.NOT_FOUND);
+	public ResponseEntity<String> InvalidCredentialsException(InvalidCredentialsException b) {
+		return new ResponseEntity<>(message6,HttpStatus.NOT_FOUND);
 	}
 	@ExceptionHandler(value=InvalidEmailPasswordException.class)
-	public ResponseEntity InvalidEmailPasswordException(InvalidEmailPasswordException b) {
-		return new ResponseEntity(message7,HttpStatus.CONFLICT);
+	public ResponseEntity<String> InvalidEmailPasswordException(InvalidEmailPasswordException b) {
+		return new ResponseEntity<>(message7,HttpStatus.CONFLICT);
 	}
 	@ExceptionHandler(value=TableNotFoundException.class)
     public ResponseEntity<String> TableNotFoundException(TableNotFoundException c) {
-        return new ResponseEntity<String>(c.getMessage(),HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(c.getMessage(),HttpStatus.NOT_FOUND);
     }
 	public GlobalExceptionsHandler() {
 		

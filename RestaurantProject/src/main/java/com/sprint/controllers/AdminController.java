@@ -18,8 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 import com.sprint.exceptions.BookingNotFoundException;
 import com.sprint.exceptions.CustomerNotFoundException;
 import com.sprint.exceptions.InvalidCredentialsException;
-import com.sprint.exceptions.InvalidEmailPasswordException;
-import com.sprint.exceptions.TransactionRecordNotFoundException;
 import com.sprint.models.Admin;
 import com.sprint.models.Booking;
 import com.sprint.models.Customer;
@@ -58,7 +56,7 @@ public class AdminController {
 	  
 	   //admin registration
 	   @PostMapping("/register")
-		public ResponseEntity<String> registerAdmin(@RequestBody Admin admin) throws InvalidEmailPasswordException {
+		public ResponseEntity<String> registerAdmin(@RequestBody Admin admin) {
 		   Admin f=this.adminImpl.registerAdmin(admin);
 		   String message="Admin has successfully registered with adminId: "+f.getAdminId()+" as "+f.getAdminName()+" with "+f.getEmailId();
 		   return ResponseEntity.ok(message);

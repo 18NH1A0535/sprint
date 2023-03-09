@@ -14,7 +14,6 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -34,8 +33,6 @@ private long transactionId;
 @Column(name="date")
 private LocalDate date;
 
-//@Column(name="end_date")
-//private LocalDate date1;
 
 @Column(name="cost")
 private double cost;

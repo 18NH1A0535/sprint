@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.sprint.exceptions.BookingNotFoundException;
-import com.sprint.exceptions.TransactionRecordNotFoundException;
 import com.sprint.dto.BookingDTO;
 import com.sprint.exceptions.BookingAlreadyExistsException;
 import com.sprint.models.Admin;
@@ -44,7 +43,6 @@ public class BookingImpl implements BookingService
 	  		book.setDate(booking.getDate());
 	  		book.setTime(time);
 	  		book.setTableNumber(booking.getTableNumber());
-	  		//book.setTime(LocalTime.now());
 	  		book.setAdmin(admin);
 	  		book.setCustomer(customer);
 	  		book.setNumberOfGuests(booking.getNumberOfGuests());

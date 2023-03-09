@@ -1,28 +1,14 @@
 package com.sprint;
 
- 
-
-
 import static org.junit.Assert.assertTrue;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.junit.jupiter.api.Assertions.assertNull;
-
- 
-
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
-
- 
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
- 
-
 import com.sprint.models.Admin;
 import com.sprint.models.Customer;
 import com.sprint.models.Restaurant;
@@ -30,7 +16,7 @@ import com.sprint.models.Transaction;
 
  
 
-public class AdminEntityTests {
+class AdminEntityTests {
     
     private Admin admin;
     
@@ -45,7 +31,7 @@ public class AdminEntityTests {
     
     @Test
     @DisplayName("Test Admin getters")
-    public void testGetters() {
+    void testGetters() {
         assertEquals(1L, admin.getAdminId());
         assertEquals("John", admin.getAdminName());
         assertEquals("john@example.com", admin.getEmailId());
@@ -54,7 +40,7 @@ public class AdminEntityTests {
     
     @Test
     @DisplayName("Test Admin setters")
-    public void testSetters() {
+     void testSetters() {
         admin.setAdminId(2L);
         admin.setAdminName("Jane");
         admin.setEmailId("jane@example.com");
@@ -68,7 +54,7 @@ public class AdminEntityTests {
     
     @Test
     @DisplayName("Test Admin transaction list")
-    public void testTransactionList() {
+     void testTransactionList() {
         List<Transaction> transactions = new ArrayList<>();
         Transaction transaction1 = new Transaction();
         transaction1.setTransactionId(1L);
@@ -86,7 +72,7 @@ public class AdminEntityTests {
     
     @Test
     @DisplayName("Test Admin customer list")
-    public void testCustomerList() {
+     void testCustomerList() {
         List<Customer> customers = new ArrayList<>();
         Customer customer1 = new Customer();
         customer1.setCustomerId(1L);
@@ -104,7 +90,7 @@ public class AdminEntityTests {
     
     @Test
     @DisplayName("Test Admin restaurant set")
-    public void testRestaurantSet() {
+     void testRestaurantSet() {
         Set<Restaurant> restaurants = new HashSet<>();
         Restaurant restaurant1 = new Restaurant();
         restaurant1.setRestaurantId(1L);
