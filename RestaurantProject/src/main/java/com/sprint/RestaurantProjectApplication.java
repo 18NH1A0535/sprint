@@ -15,7 +15,7 @@ public class RestaurantProjectApplication {
 	{
 		return "Welcome to RestaurantBooking system";
 	}
-
+//welcome message
 	public static void main(String[] args) {
 		SpringApplication.run(RestaurantProjectApplication.class, args);
 	}
